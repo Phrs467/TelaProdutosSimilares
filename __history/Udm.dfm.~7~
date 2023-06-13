@@ -1,0 +1,37 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 454
+  Width = 630
+  object cdsProdtuos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 153
+    Top = 34
+    object cdsProdtuosid: TIntegerField
+      FieldName = 'id'
+    end
+    object cdsProdtuosNome: TStringField
+      FieldName = 'Nome'
+      Size = 100
+    end
+    object cdsProdtuossimilar_id: TIntegerField
+      FieldName = 'similar_id'
+    end
+  end
+  object dsProdutos: TDataSource
+    DataSet = cdsProdtuos
+    Left = 57
+    Top = 34
+  end
+  object dsSimilar: TDataSource
+    DataSet = cdsSimilar
+    Left = 57
+    Top = 138
+  end
+  object cdsSimilar: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 153
+    Top = 138
+  end
+end

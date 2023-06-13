@@ -1,0 +1,236 @@
+object FormPrincipal: TFormPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'Principal'
+  ClientHeight = 656
+  ClientWidth = 789
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblProdutos: TLabel
+    Left = 48
+    Top = 277
+    Width = 43
+    Height = 13
+    Caption = 'Produtos'
+  end
+  object lblProdutoId: TLabel
+    Left = 32
+    Top = 445
+    Width = 10
+    Height = 13
+    Caption = 'Id'
+  end
+  object lblNome: TLabel
+    Left = 159
+    Top = 445
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object lblSimiliar_id: TLabel
+    Left = 487
+    Top = 445
+    Width = 43
+    Height = 13
+    Caption = 'Similar Id'
+  end
+  object lblSimilar: TLabel
+    Left = 48
+    Top = 13
+    Width = 30
+    Height = 13
+    Caption = 'Similar'
+  end
+  object Label2: TLabel
+    Left = 159
+    Top = 181
+    Width = 27
+    Height = 13
+    Caption = 'Nome'
+  end
+  object Label3: TLabel
+    Left = 32
+    Top = 181
+    Width = 10
+    Height = 13
+    Caption = 'Id'
+  end
+  object bvlSepardor: TBevel
+    Left = 8
+    Top = 235
+    Width = 769
+    Height = 25
+  end
+  object lblProdutosSimilares: TLabel
+    Left = 31
+    Top = 498
+    Width = 87
+    Height = 13
+    Caption = 'Produtos Similares'
+  end
+  object dbgProdutos: TDBGrid
+    Left = 24
+    Top = 307
+    Width = 713
+    Height = 134
+    Color = clInfoBk
+    DataSource = dm.dsProdutos
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nome'
+        Width = 485
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'similar_id'
+        Width = 94
+        Visible = True
+      end>
+  end
+  object dbnvgrProdutos: TDBNavigator
+    Left = 128
+    Top = 272
+    Width = 600
+    Height = 25
+    DataSource = dm.dsProdutos
+    TabOrder = 1
+  end
+  object edtProdutoId: TEdit
+    Left = 32
+    Top = 464
+    Width = 121
+    Height = 21
+    TabOrder = 2
+  end
+  object edtProdutoNome: TEdit
+    Left = 159
+    Top = 464
+    Width = 322
+    Height = 21
+    TabOrder = 3
+  end
+  object edtProdutoSimilar_Id: TEdit
+    Left = 487
+    Top = 464
+    Width = 121
+    Height = 21
+    TabOrder = 4
+  end
+  object btnIncluir: TButton
+    Left = 624
+    Top = 464
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 5
+    OnClick = btnIncluirClick
+  end
+  object dbnvgrSimilar: TDBNavigator
+    Left = 128
+    Top = 8
+    Width = 600
+    Height = 25
+    DataSource = dm.dsSimilar
+    TabOrder = 6
+  end
+  object dbgSimilar: TDBGrid
+    Left = 24
+    Top = 43
+    Width = 713
+    Height = 134
+    Color = clMoneyGreen
+    DataSource = dm.dsSimilar
+    TabOrder = 7
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id_similar'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nome_Similar'
+        Visible = True
+      end>
+  end
+  object edtIdSimilar: TEdit
+    Left = 32
+    Top = 200
+    Width = 121
+    Height = 21
+    TabOrder = 8
+  end
+  object edtNomeSimilar: TEdit
+    Left = 159
+    Top = 200
+    Width = 322
+    Height = 21
+    TabOrder = 9
+  end
+  object btnIncluirSimilar: TButton
+    Left = 624
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Incluir'
+    TabOrder = 10
+    OnClick = btnIncluirClick
+  end
+  object dbgProdutosSimilares: TDBGrid
+    Left = 24
+    Top = 514
+    Width = 713
+    Height = 134
+    TabOrder = 11
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'id'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nome'
+        Width = 485
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'similar_id'
+        Width = 94
+        Visible = True
+      end>
+  end
+end

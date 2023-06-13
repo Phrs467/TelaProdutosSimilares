@@ -1,0 +1,15 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 454
+  Width = 630
+  object dsProdtuos: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 153
+    Top = 34
+  end
+  object dsProdutos: TDataSource
+    Left = 57
+    Top = 34
+  end
+end

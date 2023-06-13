@@ -1,0 +1,32 @@
+unit Udm;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, Data.DB, Datasnap.DBClient;
+
+type
+  Tdm = class(TDataModule)
+    cdsProdtuos: TClientDataSet;
+    dsProdutos: TDataSource;
+    cdsProdtuosNome: TStringField;
+    cdsProdtuosid: TIntegerField;
+    cdsProdtuossimilar_id: TIntegerField;
+    dsSimilar: TDataSource;
+    cdsSimilar: TClientDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dm: Tdm;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.
